@@ -7,11 +7,11 @@ import model.BanhTet;
 public class BanhFactory {
     public BanhFactory() {
     }
-    public static Banh getBanh(int type, int dau, int thit, int gao){
+    public static Banh getBanh(TypeBanh type, int dau, int thit, int gao){
         switch (type){
-            case 1:
+            case BANHTET:
                 return new BanhTet(dau, thit, gao);
-            case 2:
+            case BANHCHUNG:
                 return new BanhChung(dau, thit, gao);
             default:
                 return null;
